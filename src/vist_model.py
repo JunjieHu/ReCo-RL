@@ -786,3 +786,8 @@ class VistModel(nn.Module):
                 dBLEU_reward = 1 - dBLEU
                 scores.append(dBLEU_reward)
         return scores
+
+    def forward(self, src_seq, src_lengths, trg_seq):
+        src_hidden, final_src_ctx = self.encoder(src_seq, src_lengths)
+        scores = self.decoder(src_hidden, final_src_ctx, trg_seq)
+        return scores

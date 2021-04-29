@@ -12,7 +12,7 @@ https://repo.anaconda.com/pkgs/main/linux-64/jpeg-9b-h024ee3a_2.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/libffi-3.2.1-he1b5a44_1006.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/libopenblas-0.3.7-h5ec1e0e_6.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.1-hf484d3e_1002.tar.bz2
-https://conda.anaconda.org/anaconda/linux-64/openssl-1.1.1-h7b6447c_0.tar.bz2
+https://conda.anaconda.org/anaconda/linux-64/openssl-1.1.1d-h7b6447c_4.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/xz-5.2.4-h14c3975_4.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/zlib-1.2.11-h7b6447c_3.tar.bz2
 https://conda.anaconda.org/anaconda/linux-64/hdf5-1.10.4-hb1b8bf9_0.tar.bz2

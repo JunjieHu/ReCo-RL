@@ -24,9 +24,17 @@ Please use the following Anaconda environment.
 - pytorch=1.0.1
 - pytorch_pretrained_bert=0.6.2
 - spacy, nltk, numpy, scipy, h5py, json, pickle
-
+- cython
+- pycocoevalcap
+- spice
 ```
-conda env create --file conda-env.txt
+conda env create --name reco --file conda-env.txt
+conda activate reco
+# Install cython, pycocoevalcap
+pip install cython
+pip install pycocoevalcap
+cd src
+bash get_stanford_models.sh
 ```
 
 
@@ -38,6 +46,17 @@ The preprocessed data and pre-trained models can be found [here](https://drive.g
 - ***reco-rl-model.zip***: model file (model.bin) and vocab file (vocab.bin).
 - ***bert-base-uncased.zip***: BERT's next sentence predictor model and its vocab file.
 
+```
+# Set REPO to the path of this repository
+REPO=/home/junjieh/ReCo-RL
+mkdir -p $REPO/outputs/rl/ $REPO/downloads
+
+# Download data.zip to $REPO/downloads
+cd $REPO/downloads & unzip data.zip
+
+# Download reco-rl-model.zip to $REPO/outputs/rl/
+cd $REPO/outputs/rl/ & unzip reco-rl-model.zip
+```
 
 Demo
 ==
@@ -48,6 +67,8 @@ Demo
 |ReCo-RL|11.2|13.5|29.5|11.8|35.8| 
 
 ```
+# Go to the folder of this repository.
+# Replace [GPU id] by an integer, indicating which GPU to run on a multi-GPU machine.
 bash scripts/test.sh [GPU id]
 ```
 
