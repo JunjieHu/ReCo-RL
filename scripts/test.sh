@@ -23,14 +23,8 @@ CMD="python -u $REPO/src/test.py \
     --decode_len_constraint $dec_len \
     --save_decode_file ${decode_file}" 
 
-#echo "$CMD > ${log}"
-#echo "$CMD" > ${log}
-#bash -c "$CMD" &>> ${log}
-
-# # source activate py27
-# CMD="python vist/scorer.py $ref_file $decode_file "
-# echo "$CMD >> ${log}"
-# echo "CMD" >> ${log}
-# bash -c "$CMD >> ${log}"
+echo "$CMD > ${log}"
+echo "$CMD" > ${log}
+bash -c "$CMD" &>> ${log}
 
 python $REPO/src/scorer.py $data_dir/test_dataset.p $decode_file >> ${log} 
