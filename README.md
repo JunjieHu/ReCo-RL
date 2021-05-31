@@ -45,6 +45,7 @@ The preprocessed data and pre-trained models can be found [here](https://drive.g
 - ***data.zip***: train/dev/test data including image features, VIST captions and entities preprocessed by spacy.
 - ***reco-rl-model.zip***: model file (model.bin) and vocab file (vocab.bin).
 - ***bert-base-uncased.zip***: BERT's next sentence predictor model and its vocab file.
+- ***decode-beam5-len30.tsv***: predicted outputs by our ReCO-RL model. Each line contains the sequence ID and the generated story. Please consider using this file for a fair comparison in your human evaluation.
 
 ```
 # Set REPO to the path of this repository
@@ -60,7 +61,7 @@ cd $REPO/outputs/rl/ & unzip reco-rl-model.zip
 
 Demo
 ==
-- Decode the test set using pre-trained model. We recommend to use our pre-trained model for further comparison in your paper. After decoding, you would expect to see the decoding automatic scores as follows (improved scores over those reported in the paper).
+- Decode the test set using pre-trained model. We recommend to use our pre-trained model for further comparison in your paper. After decoding, you would expect to see the decoding automatic scores as follows (improved scores over those reported in the paper). You can find the decoding output by our model [here](https://drive.google.com/file/d/1QBjKZVynWOSA6PsQJofNMU4WknBs1mq8/view?usp=sharing). 
 
 |Score|SPICE|BLEU-4|ROUGE-L|CIDEr|METEOR|
 |---|---|---|---|---|---|
